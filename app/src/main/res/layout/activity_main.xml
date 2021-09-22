@@ -31,7 +31,7 @@
     <FrameLayout
         android:id="@+id/frmAuthor"
         android:layout_width="0dp"
-        android:layout_height="43dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -181,7 +181,7 @@
         app:layout_constraintTop_toBottomOf="@+id/frmWinner">
 
         <fragment
-            android:id="@+id/txtFragGanePlayed"
+            android:id="@+id/txtFragGamePlayed"
             android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragGamesPlayed"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
