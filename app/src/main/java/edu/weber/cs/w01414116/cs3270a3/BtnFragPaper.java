@@ -23,7 +23,7 @@ public class BtnFragPaper extends Fragment {
     private onButtonListener mCallback;
 
     public interface onButtonListener{
-        void fragButtonPressed(int count);
+        void fragButtonPressed(Button btn);
     }
 
     public BtnFragPaper() {
@@ -46,8 +46,13 @@ public class BtnFragPaper extends Fragment {
             @Override
             public void onClick(View v){
                 //call actions needed
-                count++;
-                mCallback.fragButtonPressed(count);
+
+                // needs to pass through that paper was selected back to main activity,
+                // within the main activity it will then tell the fragment for the phone to
+                // select it's choice, pass it back to the main activity and the main activity
+                // will pass choices to the winner fragment to determine and display the winner,
+                // where it will then pass the count of the winner into the related count fragment
+                mCallback.fragButtonPressed(btn);
             }
         });
     }
