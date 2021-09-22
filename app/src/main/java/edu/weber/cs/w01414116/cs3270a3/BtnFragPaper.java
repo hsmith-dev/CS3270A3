@@ -41,10 +41,11 @@ public class BtnFragPaper extends Fragment {
     public void onStart() {
         super.onStart();
 
-        Button btn = root.findViewById(R.id.btn);
+        Button btn = root.findViewById(R.id.btnPaper);
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                //call actions needed
                 count++;
                 mCallback.fragButtonPressed(count);
             }
