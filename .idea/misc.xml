@@ -6,6 +6,10 @@
         <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_blank.xml" value="0.55" />
         <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_btn.xml" value="0.55" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_btn_paper.xml" value="0.328125" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_btn_reset_cnt.xml" value="0.328125" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_btn_rock.xml" value="0.328125" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_btn_scissors.xml" value="0.328125" />
         <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_txt_frag_author.xml" value="0.12297734627831715" />
         <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_txt_frag_game.xml" value="0.5359375" />
         <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_txt_frag_games_played.xml" value="0.55" />
@@ -14,6 +18,7 @@
         <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_txt_frag_phone_pick.xml" value="0.55" />
         <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_txt_frag_tie_games.xml" value="0.5359375" />
         <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_txt_frag_user_pick.xml" value="0.5359375" />
+        <entry key="..\:/Users/me/AndroidStudioProjects/CS3270A3/app/src/main/res/layout/fragment_txt_winner.xml" value="0.328125" />
       </map>
     </option>
   </component>

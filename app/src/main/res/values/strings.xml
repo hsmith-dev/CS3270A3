@@ -5,9 +5,14 @@
     <string name="by_author">By Harrison Smith</string>
     <string name="rock_paper_scissors">Rock, Paper, Scissors</string>
     <string name="my_pick">My Pick</string>
-    <string name="phone_choice">\?</string>
+    <string name="phone_choice">Phone Pick is\t\?</string>
     <string name="win_count">My Win Count\t\t0</string>
     <string name="txtFragPhoneWinCnt">Phone Win Count\t0</string>
     <string name="TieGamesCount">Tie Games\t\t0</string>
     <string name="games_played">Games Played\t0</string>
+    <string name="winner" />
+    <string name="rocks">Rocks</string>
+    <string name="reset_count">Reset Count</string>
+    <string name="scissors">Scissors</string>
+    <string name="paper">Paper</string>
 </resources>
