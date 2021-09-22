@@ -15,8 +15,16 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/frmAuthor"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <fragment
+            android:id="@+id/txtFragGame"
+            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragGame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
 
     </FrameLayout>
 
@@ -32,6 +40,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frmGameName">
 
+        <fragment
+            android:id="@+id/txtFragAuth"
+            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
     </FrameLayout>
 
     <FrameLayout
@@ -44,6 +58,13 @@
         app:layout_constraintEnd_toStartOf="@+id/frmBtnRock"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frmAuthor">
+
+        <fragment
+            android:id="@+id/txtFragUserPick"
+            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragUserPick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
 
     </FrameLayout>
 
@@ -96,6 +117,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frmChoice">
 
+
+
     </FrameLayout>
 
     <FrameLayout
@@ -109,6 +132,13 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/frmPhone"
         app:layout_constraintTop_toTopOf="@+id/frmPhone">
+
+        <fragment
+            android:id="@+id/txtFragPhonePick"
+            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragPhonePick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
 
     </FrameLayout>
 
@@ -132,23 +162,17 @@
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/frmPlayerWin"
-        app:layout_constraintEnd_toStartOf="@+id/frmCntPlayed"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frmWinner">
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmCntPlayed"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/frmPlayed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/frmPlayed"
-        app:layout_constraintTop_toTopOf="@+id/frmPlayed">
+        <fragment
+            android:id="@+id/txtFragGanePlayed"
+            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragGamesPlayed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </FrameLayout>
 
@@ -160,23 +184,15 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/frmComWin"
-        app:layout_constraintEnd_toStartOf="@+id/frmCntPlayer"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frmPlayed">
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmCntPlayer"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/frmPlayerWin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/frmPlayerWin"
-        app:layout_constraintTop_toTopOf="@+id/frmPlayerWin"
-        app:layout_constraintVertical_bias="0.0">
-
+        <fragment
+            android:id="@+id/txtFragPhoneWinCnt"
+            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragPhoneCnt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </FrameLayout>
 
     <FrameLayout
@@ -185,24 +201,17 @@
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/frmTie"
-        app:layout_constraintEnd_toStartOf="@+id/frmCntCom"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frmPlayerWin">
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmCntCom"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/frmComWin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/frmComWin"
-        app:layout_constraintTop_toTopOf="@+id/frmComWin">
-
+        <fragment
+            android:id="@+id/txtFragMyWinCnt"
+            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragMyWinCnt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </FrameLayout>
 
     <FrameLayout
@@ -213,22 +222,15 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/frmBtnReset"
-        app:layout_constraintEnd_toStartOf="@+id/frmCntTie"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frmComWin">
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmCntTie"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/frmTie"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/frmTie"
-        app:layout_constraintTop_toTopOf="@+id/frmTie">
-
+        <fragment
+            android:id="@+id/txtFragTieCnt"
+            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragTieGames"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </FrameLayout>
 
     <FrameLayout
@@ -238,7 +240,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
