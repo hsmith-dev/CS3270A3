@@ -3,16 +3,21 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="by_author">By Harrison Smith</string>
-    <string name="rock_paper_scissors">Rock, Paper, Scissors</string>
+    <string name="game_name">Rock, Paper, Scissors</string>
     <string name="my_pick">My Pick</string>
-    <string name="phone_choice">Phone Pick is \t\?</string>
-    <string name="win_count">My Win Count\t\t0</string>
-    <string name="txtFragPhoneWinCnt">Phone Win Count\t0</string>
-    <string name="TieGamesCount">Tie Games\t\t0</string>
-    <string name="games_played">Games Played\t0</string>
+    <string name="TieGames">Tie Games</string>
+    <string name="games_played">Games Played</string>
     <string name="winner" />
-    <string name="rocks">Rock</string>
+    <string name="rock">Rock</string>
     <string name="reset_count">Reset Count</string>
     <string name="scissors">Scissor</string>
     <string name="paper">Paper</string>
+    <string name="tiegame_score">0</string>
+    <string name="mywin_score">0</string>
+    <string name="phone_pick_is">Phone Pick is</string>
+    <string name="phone_pick_answer">\?</string>
+    <string name="my_win_count">My Win Count</string>
+    <string name="phone_win_count">Phone Win Count</string>
+    <string name="gameplayed_score">0</string>
+    <string name="phone_win_score">0</string>
 </resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameFragment">
+
+    <FrameLayout
+        android:id="@+id/frmGameName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frmAuthor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/game_name" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmAuthor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frmChoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmGameName">
+
+        <TextView
+            android:id="@+id/tvAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/by_author" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmChoice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frmPhone"
+        app:layout_constraintEnd_toStartOf="@+id/frmBtnRock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmAuthor">
+
+        <TextView
+            android:id="@+id/tvMyPick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/my_pick" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmBtnRock"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frmChoice"
+        app:layout_constraintEnd_toStartOf="@+id/frmBtnPaper"
+        app:layout_constraintStart_toEndOf="@+id/frmChoice"
+        app:layout_constraintTop_toTopOf="@+id/frmChoice">
+
+        <Button
+            android:id="@+id/btnRock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/rock" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmBtnPaper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frmChoice"
+        app:layout_constraintEnd_toStartOf="@+id/frmBtnScissors"
+        app:layout_constraintStart_toEndOf="@+id/frmBtnRock"
+        app:layout_constraintTop_toTopOf="@+id/frmChoice">
+
+        <Button
+            android:id="@+id/btnPaper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/paper" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmBtnScissors"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frmChoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frmBtnPaper"
+        app:layout_constraintTop_toTopOf="@+id/frmChoice">
+
+        <Button
+            android:id="@+id/btnScissors"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/scissors" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmPhone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frmWinner"
+        app:layout_constraintEnd_toStartOf="@+id/frmPhoneChoice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmChoice">
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/phone_pick_is" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmPhoneChoice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frmPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/frmPhone"
+        app:layout_constraintTop_toTopOf="@+id/frmPhone">
+
+        <TextView
+            android:id="@+id/tvPhonePick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text= "@string/phone_pick_answer"
+            android:textColor="@color/purple_500"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmWinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmPhone">
+
+        <TextView
+            android:id="@+id/tvWinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/purple_500"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

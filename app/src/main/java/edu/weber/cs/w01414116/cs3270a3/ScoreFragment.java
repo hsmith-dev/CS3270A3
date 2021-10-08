@@ -14,7 +14,7 @@ import android.widget.Button;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BtnFragPaper extends Fragment {
+public class ScoreFragment extends Fragment {
 
     private View root;
     private int count = 0;
@@ -24,7 +24,7 @@ public class BtnFragPaper extends Fragment {
         void fragButtonPressed(Button btn);
     }
 
-    public BtnFragPaper() {
+    public ScoreFragment() {
         // Required empty public constructor
     }
 
@@ -32,7 +32,7 @@ public class BtnFragPaper extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_btn_paper, container, false);
+        return inflater.inflate(R.layout.fragment_score, container, false);
     }
 
     @Override

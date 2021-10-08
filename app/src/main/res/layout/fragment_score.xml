@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameFragment">
+
+
+    <FrameLayout
+        android:id="@+id/frmPlayed"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frmPlayerWin"
+        app:layout_constraintEnd_toStartOf="@+id/frmCntPlayed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvGamePlayed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/games_played" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmCntPlayed"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frmPlayed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frmPlayed"
+        app:layout_constraintTop_toTopOf="@+id/frmPlayed">
+
+        <TextView
+            android:id="@+id/tvGamePlayedCount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="@string/gameplayed_score" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmPlayerWin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frmComWin"
+        app:layout_constraintEnd_toStartOf="@+id/frmCntPlayer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmPlayed">
+
+        <TextView
+            android:id="@+id/tvPhoneCount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/phone_win_count" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmCntPlayer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frmPlayerWin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frmPlayerWin"
+        app:layout_constraintTop_toTopOf="@+id/frmPlayerWin"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tvPhoneScore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/purple_500"
+            android:text="@string/phone_win_score" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmComWin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frmTie"
+        app:layout_constraintEnd_toStartOf="@+id/frmCntCom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmPlayerWin">
+
+        <TextView
+            android:id="@+id/tvMyWinCount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/my_win_count" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmCntCom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frmComWin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frmComWin"
+        app:layout_constraintTop_toTopOf="@+id/frmComWin">
+
+        <TextView
+            android:id="@+id/tvMyWinScore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/purple_500"
+            android:text="@string/mywin_score" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmTie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frmBtnReset"
+        app:layout_constraintEnd_toStartOf="@+id/frmCntTie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmComWin">
+
+        <TextView
+            android:id="@+id/tvTieGame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/TieGames" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmCntTie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frmTie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frmTie"
+        app:layout_constraintTop_toTopOf="@+id/frmTie">
+
+        <TextView
+            android:id="@+id/tvTieScore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/purple_500"
+            android:text="@string/tiegame_score" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frmBtnReset"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmTie">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/reset_count" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

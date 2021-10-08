@@ -7,263 +7,34 @@
     tools:context=".MainActivity">
 
     <FrameLayout
-        android:id="@+id/frmGameName"
+        android:id="@+id/gameLayout"
         android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/frmAuthor"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/scoreLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <fragment
-            android:id="@+id/txtFragGame"
-            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragGame"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="edu.weber.cs.w01414116.cs3270a3.GameFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frmAuthor"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/frmChoice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frmGameName">
-
-        <fragment
-            android:id="@+id/txtFragAuth"
-            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragAuthor"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmChoice"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/frmPhone"
-        app:layout_constraintEnd_toStartOf="@+id/frmBtnRock"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frmAuthor">
-
-        <fragment
-            android:id="@+id/txtFragUserPick"
-            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragUserPick"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmBtnRock"
+        android:id="@+id/scoreLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="7dp"
-        app:layout_constraintBottom_toBottomOf="@+id/frmChoice"
-        app:layout_constraintEnd_toStartOf="@+id/frmBtnPaper"
-        app:layout_constraintStart_toEndOf="@+id/frmChoice"
-        app:layout_constraintTop_toTopOf="@+id/frmChoice">
-
-        <fragment
-            android:id="@+id/btnRock"
-            android:name="edu.weber.cs.w01414116.cs3270a3.BtnFragRock"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmBtnPaper"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/frmChoice"
-        app:layout_constraintEnd_toStartOf="@+id/frmBtnScissors"
-        app:layout_constraintStart_toEndOf="@+id/frmBtnRock"
-        app:layout_constraintTop_toTopOf="@+id/frmChoice">
-
-        <fragment
-            android:id="@+id/btnPaper"
-            android:name="edu.weber.cs.w01414116.cs3270a3.BtnFragPaper"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmBtnScissors"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/frmChoice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/frmBtnPaper"
-        app:layout_constraintTop_toTopOf="@+id/frmChoice">
-
-        <fragment
-            android:id="@+id/btnScissors"
-            android:name="edu.weber.cs.w01414116.cs3270a3.BtnFragScissors"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmPhone"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/frmWinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frmChoice">
-
-
-        <fragment
-            android:id="@+id/txtFragPhonePick"
-            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragPhonePick"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmWinner"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/frmPlayed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frmPhone">
-
-        <fragment
-            android:id="@+id/txtFragWinner"
-            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragWinner"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmPlayed"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/frmPlayerWin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frmWinner">
-
-        <fragment
-            android:id="@+id/txtFragGamePlayed"
-            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragGamesPlayed"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmPlayerWin"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/frmComWin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frmPlayed">
-
-        <fragment
-            android:id="@+id/txtFragPhoneWinCnt"
-            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragPhoneCnt"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmComWin"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/frmTie"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frmPlayerWin">
-
-        <fragment
-            android:id="@+id/txtFragMyWinCnt"
-            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragMyWinCnt"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmTie"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/frmBtnReset"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frmComWin">
-
-        <fragment
-            android:id="@+id/txtFragTieCnt"
-            android:name="edu.weber.cs.w01414116.cs3270a3.TxtFragTieGames"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frmBtnReset"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frmTie">
+        app:layout_constraintTop_toBottomOf="@+id/gameLayout">
 
-        <fragment
-            android:id="@+id/btnResetCnt"
-            android:name="edu.weber.cs.w01414116.cs3270a3.BtnFragResetCnt"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView2"
+            android:name="edu.weber.cs.w01414116.cs3270a3.ScoreFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
