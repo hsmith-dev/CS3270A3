@@ -6,35 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/gameLayout"
+    <fragment
+        android:id="@+id/fragmentGameView"
+        android:name="edu.weber.cs.w01414116.cs3270a3.GameFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/scoreLayout"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentScoreView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView"
-            android:name="edu.weber.cs.w01414116.cs3270a3.GameFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/scoreLayout"
+    <fragment
+        android:id="@+id/fragmentScoreView"
+        android:name="edu.weber.cs.w01414116.cs3270a3.ScoreFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameLayout">
+        app:layout_constraintTop_toBottomOf="@+id/fragmentGameView" />
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView2"
-            android:name="edu.weber.cs.w01414116.cs3270a3.ScoreFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

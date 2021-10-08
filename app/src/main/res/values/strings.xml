@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">CS3270A3 Smith</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="by_author">By Harrison Smith</string>
     <string name="game_name">Rock, Paper, Scissors</string>
     <string name="my_pick">My Pick</string>
@@ -10,7 +8,7 @@
     <string name="winner" />
     <string name="rock">Rock</string>
     <string name="reset_count">Reset Count</string>
-    <string name="scissors">Scissor</string>
+    <string name="scissors">Scissors</string>
     <string name="paper">Paper</string>
     <string name="tiegame_score">0</string>
     <string name="mywin_score">0</string>

@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="@+id/frmPlayed">
 
         <TextView
-            android:id="@+id/tvGamePlayedCount"
+            android:id="@+id/tvGamePlayedScore"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/black"
@@ -170,7 +170,7 @@
         app:layout_constraintTop_toBottomOf="@+id/frmTie">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnReset"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/reset_count" />

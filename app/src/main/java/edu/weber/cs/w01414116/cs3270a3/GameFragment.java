@@ -1,64 +1,185 @@
 package edu.weber.cs.w01414116.cs3270a3;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link GameFragment#newInstance} factory method to
- * create an instance of this fragment.
  */
 public class GameFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private View root;
+    private onButtonListener mCallBack; // m stands for member
+    private int count = 0, pCount = 0, mCount = 0, tCount = 0;
+    private TextView tvPhonePick, tvWinner;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    public interface onButtonListener {
+        void fragButtonPressed(int count, int pCount, int mCount, int tCount);
+    }
 
     public GameFragment() {
         // Required empty public constructor
-    }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment BtnFragResetCnt.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static GameFragment newInstance(String param1, String param2) {
-        GameFragment fragment = new GameFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_game, container, false);
+        return root = inflater.inflate(R.layout.fragment_game, container, false);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // creates buttons and sets the reference to the buttons
+        Button btnRock = root.findViewById(R.id.btnRock);
+        Button btnPaper = root.findViewById(R.id.btnPaper);
+        Button btnScissors = root.findViewById(R.id.btnScissors);
+
+        btnRock.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                // count increments the number of games played
+                count++;
+                onUserChoice('r');
+            }
+        });
+
+        // this is the listener for the paper button
+        btnPaper.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                // count increments the number of games played
+                count++;
+                onUserChoice('p');
+            }
+        });
+
+        btnScissors.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                // count increments the number of games played
+                count++;
+                onUserChoice('s');
+            }
+        });
+
+        tvPhonePick = root.findViewById(R.id.tvPhonePick);
+        tvWinner = root.findViewById(R.id.tvWinner);
+    }
+
+    // instructor says to ignore the deprecations since we are targeting API 21
+    @Override
+    public void onAttach(@NonNull Activity activity) {
+        super.onAttach(activity);
+
+        try{
+            mCallBack = (onButtonListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString() + " Must implement onButtonListener()");
+        }
+    }
+
+    /**
+     *
+     * @param uChoice the character that represents rock, paper or scissors that the user selected
+     */
+    private void onUserChoice(char uChoice){
+        // pChoice is used as the phone's choice
+        char pChoice = computeChoice();
+        // determines who wins the game, or if a tie, then calls another method to update text
+        gameRules(uChoice, pChoice);
+    }
+
+    private char computeChoice(){
+        char choice;
+
+        Random rand = new Random();
+        int intChoice = rand.nextInt(3);
+        if(intChoice == 0)
+            choice = 'r';
+        else if(intChoice == 1)
+            choice = 'p';
+        else
+            choice = 's';
+
+        return choice;
+    }
+
+    private void gameRules(char uChoice, char pChoice){
+        if (uChoice == 'r'){
+            if(pChoice == 'r'){
+                //tie
+                tCount++;
+                updateGameText("Rock","Tie!");
+            } else if(pChoice == 'p'){
+                // phone wins
+                pCount++;
+                updateGameText("Paper","Phone Wins!");
+            } else if(pChoice == 's'){
+                // user wins
+                mCount++;
+                updateGameText("Scissors","You Win!");
+            }
+        } else if (uChoice == 'p'){
+            if(pChoice == 'r'){
+                // user wins
+                mCount++;
+                updateGameText("Rock","You Win!");
+            } else if(pChoice == 'p'){
+                // tie
+                tCount++;
+                updateGameText("Paper","Tie!");
+            } else if(pChoice == 's'){
+                // phone wins
+                pCount++;
+                updateGameText("Scissors","Phone Wins!");
+            }
+        } else if (uChoice == 's'){
+            if(pChoice == 'r'){
+                // phone wins
+                pCount++;
+                updateGameText("Rock","Phone Wins!");
+            } else if(pChoice == 'p'){
+                // user wins
+                mCount++;
+                updateGameText("Paper","You Win!");
+            } else if(pChoice == 's'){
+                // tie
+                tCount++;
+                updateGameText("Scissors","Tie!");
+            }
+        }
+    }
+
+    private void updateGameText(String phone, String result){
+        tvPhonePick.setText(""+phone);
+        tvWinner.setText(result+"");
+    }
+
+    // used to reset the counts
+    protected void resetCounts(){
+        count = 0;
+        pCount = 0;
+        mCount = 0;
+        tCount = 0;
     }
 }
